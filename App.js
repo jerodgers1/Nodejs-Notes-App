@@ -1,17 +1,10 @@
-const fileSystem = require('fs');
-const OperatingSystem = require('os');
+//Loads Libraries
 
-var UserInformation = OperatingSystem.userInfo();
+//Loads File
+const Notes = require('./Notes.js');
 
-fileSystem.appendFile('Greetings.txt', 'Hello ' + UserInformation.username + '!', function(err) {
-	if(err) {
-		console.log('Unable to append to file');
-	}
-});
+var response = Notes.addNote();
+console.log(response);
 
-//using template strings
-fileSystem.appendFile('Greetings.txt', `Hello ${UserInformation.username}! From template string`, function(err) {
-	if(err) {
-		console.log('Unable to append to file');
-	}
-});
+var product = Notes.add(2,3);
+console.log(`2 plue 3 equals ${product}.`);
