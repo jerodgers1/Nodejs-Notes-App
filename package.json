@@ -1,0 +1,22 @@
+{
+  "name": "notesnode",
+  "version": "1.0.0",
+  "description": "Practice",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jerodgers1/Nodejs-Notes-App.git"
+  },
+  "author": "James Rodgers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jerodgers1/Nodejs-Notes-App/issues"
+  },
+  "homepage": "https://github.com/jerodgers1/Nodejs-Notes-App#readme",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}
