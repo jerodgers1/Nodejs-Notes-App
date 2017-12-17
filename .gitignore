@@ -263,4 +263,6 @@ __pycache__/
 
 # files that are created by the program
 
-**/files
+
+notes.json
+Greetings.txt
