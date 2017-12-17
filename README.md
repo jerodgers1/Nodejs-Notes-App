@@ -1,6 +1,6 @@
-in the command propt type
-	npm install 
-this will install all the dependices
+in the command prompt type
+	"npm install" 
+this will install all the dependencies
 
 to run the program in the command prompt use the follow:
 
