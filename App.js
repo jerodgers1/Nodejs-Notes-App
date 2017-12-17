@@ -2,9 +2,30 @@ const lodash = require('lodash');
 const yargs = require('yargs');
 const notes = require('./Notes.js');
 
+const titleOptions = {
+		describe: 'Title for the note',
+		demand: true,
+		alias: 't'
+	}
 //yargs is a easier way of getting command line arguments
-//command line should look like node app.js <add/list/read/remove> --title="anything" --body="anything"
-var argv = yargs.argv;
+var argv = yargs
+	.command('add', 'Add a new note', {
+		title: titleOptions,
+		body: {
+			describe: 'Body of the note',
+			demand: true,
+			alias: 'b'
+		}
+	})
+	.command('list', 'Displays all the notes')
+	.command('read', 'Read one note by title', {
+		title: titleOptions
+	})
+	.command('remove', 'Remove a note by the title', {
+		title: titleOptions
+	})
+	.help()
+	.argv;
 var command = process.argv[2];
 
 if(command === 'add'){
